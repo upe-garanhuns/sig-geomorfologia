@@ -22,10 +22,6 @@ html{
     min-width: 100vh;
 }
 
-div > button.secao-mapas__conteudo__botao {
-    display: flex;
-}
-
 .link{
     text-decoration: none;
 }
@@ -131,8 +127,8 @@ div > button.secao-mapas__conteudo__botao {
 .secao-mapa-interativo__container-mapa-interativo{
     width: 80%;
     height: 80%;
-    background: url('../img/map.png') no-repeat;
-    background-size: cover;
+    /*background: url('../img/map.png') no-repeat;
+    background-size: cover;*/
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
@@ -305,7 +301,6 @@ div > button.secao-mapas__conteudo__botao {
     border: 1px solid var(--principal-color);
     border-radius: 2rem;
     background-color: var(--aux-font-color);
-    margin-left: 50%;
 }
 
 .secao-mapas__conteudo__descricao__botao {
