@@ -1,5 +1,7 @@
 
-    var map = L.map('map').setView([-8.887240773326587, -36.48660625446342], 14);
+    var map = L.map('map', {
+        meeasureControl: true,
+    }).setView([-8.887240773326587, -36.48660625446342], 14);
 
     var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', 
     {
