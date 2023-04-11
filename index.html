@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link rel="stylesheet" href="./public/styles/main.css">
+    <link href="./public/styles/barraPesquisa.css" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="">
+    </script>
+    <img src="./img/search_icon.png" alt="" srcset="">
     <title>SIG</title>
-    <link rel="stylesheet" href="public/styles/main.css">
 </head>
+
 <body>
     <header class="cabecalho">
         <div class="cabecalho__area-interna">
-           <img src="public/img/menu-icon.svg" alt="">
-            <img src="" alt="logo"> <!-- sem o src-->
-            <a href="#" class="link cabecalho__area-interna__botao"><span>Entrar <img src="public/img/sign-in-arrow-icon.svg" alt=""></span></a> 
+            <img src="./public/img/menu-icon.svg" alt="">
+            <img src="" alt="logo">
+            <a href="#" class="link cabecalho__area-interna__botao"><span>Entrar <img
+                        src="./public/img/sign-in-arrow-icon.svg" alt=""></span></a>
         </div>
     </header>
 
     <div class="secao-mapa-interativo">
-        <div class="secao-mapa-interativo__container-mapa-interativo">
-            <div class="secao-mapa-interativo__container-mapa-interativo__barra-pesquisa">
+        <div id="map" class="secao-mapa-interativo__container-mapa-interativo">
+            <!--<div class="secao-mapa-interativo__container-mapa-interativo__barra-pesquisa">
                 <input type="search" placeholder="Encontre o endereço e o local" class="secao-mapa-interativo__container-mapa-interativo__barra-pesquisa__campo-pesquisa">
-                <button type="submit" class="secao-mapa-interativo__container-mapa-interativo__barra-pesquisa__botao"><img src="public/img/lupa.svg" alt=""></button>
+                <button type="submit" class="secao-mapa-interativo__container-mapa-interativo__barra-pesquisa__botao"><img src="../public/img/lupa.svg" alt=""></button>
             </div>
 
             <div class="secao-mapa-interativo__container-mapa-interativo__secao-botoes--localizacao">
                 <button class="btn">
-                    <img src="public/img/house.svg" alt="">
+                    <img src="../public/img/house.svg" alt="">
                 </button>
                 <button class="btn">
-                    <img src="public/img/gps.svg" alt="">
+                    <img src="../public/img/gps.svg" alt="">
                 </button>
             </div>
 
             <div class="secao-mapa-interativo__container-mapa-interativo__secao-botoes--funcionalidades">
                 <button class="btn btn--funcionalidades">
-                    <img src="public/img/lista.svg" alt="">
+                    <img src="../public/img/lista.svg" alt="">
                 </button>
                 <button class="btn btn--funcionalidades">
-                    <img src="public/img/camadas.svg" alt="">
+                    <img src="../public/img/camadas.svg" alt="">
                 </button>
                 <button class="btn btn--funcionalidades">
-                    <img src="public/img/regua-triangulo.svg" alt="">
+                    <img src="../public/img/regua-triangulo.svg" alt="">
                 </button>
                 <button class="btn btn--funcionalidades">
-                    <img src="public/img/map-pin.svg" alt="">
+                    <img src="../public/img/map-pin.svg" alt="">
                 </button>
                 <button class="btn btn--funcionalidades">
-                    <img src="public/img/windows.svg" alt="">
+                    <img src="../public/img/windows.svg" alt="">
                 </button>
             </div>
 
             <div class="secao-mapa-interativo__container-mapa-interativo__secao-botoes--zoom">
                 <button class="btn">
-                    <img src="public/img/plus.svg" alt="">
+                    <img src="../public/img/plus.svg" alt="">
                 </button>
                 <button class="btn">
-                    <img src="public/img/menos.svg" alt="">
+                    <img src="../public/img/menos.svg" alt="">
                 </button>
                 <span class="secao-mapa-interativo__container-mapa-interativo__secao-botoes--zoom__botao-tela-cheia">
-                    <img src="public/img/arrows-fullscreen.svg" alt="">
+                    <img src="../public/img/arrows-fullscreen.svg" alt="">
                 </span>
-            </div>
-            
+            </div>-->
         </div>
     </div>
     <div class="secao-mapas">
@@ -70,50 +79,54 @@
                 <h2 class="title">Mapas fixos</h2>
                 <span class="line"></span>
                 <p class="secao-mapas__conteudo__descricao__paragrafo">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    At quos natus temporibus unde modi aperiam, dignissimos 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    At quos natus temporibus unde modi aperiam, dignissimos
                     olorum deleniti deserunt cumque dolores quidem .
                 </p>
-                <button class="secao-mapas__conteudo__botao secao-mapas__conteudo__descricao__botao" type="button">Explore <img src="public/img/arrow-right.svg" alt=""></button>
+                <button class="secao-mapas__conteudo__botao secao-mapas__conteudo__descricao__botao"
+                    type="button">Explore <img src="./public/img/arrow-right.svg" alt=""></button>
             </section>
 
             <div class="secao-mapas__conteudo__card">
-                <img class="secao-mapas__conteudo__card__img" src="public/img/map.png" alt="">
-                <div class="secao-mapas__conteudo__card__texto">
-                    <h2 class="title secao-mapas__conteudo__card__texto__title">Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Ex cum earum, quos voluptas tempore quidem natus corporis
-                     temporibus eveniet ipsum delectus veritatis dignissimos neque
-                      ipsa iure vero repellendus quibusdam at.</p>
-                </div>
-                <button class="secao-mapas__conteudo__botao" type="button"><img src="public/img/arrow-right.svg" alt=""></button>
+                <! –<img class="secao-mapas__conteudo__card__img" src="./public/img/map.png" alt="">
+                    <div class="secao-mapas__conteudo__card__texto">
+                        <h2 class="title secao-mapas__conteudo__card__texto__title">Lorem Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Ex cum earum, quos voluptas tempore quidem natus corporis
+                            temporibus eveniet ipsum delectus veritatis dignissimos neque
+                            ipsa iure vero repellendus quibusdam at.</p>
+                    </div>
+                    <button class="secao-mapas__conteudo__botao" type="button"><img src="./public/img/arrow-right.svg"
+                            alt=""></button>
             </div>
 
             <div class="secao-mapas__conteudo__card">
-                <img class="secao-mapas__conteudo__card__img" src="public/img/map.png" alt="">
+                <img class="secao-mapas__conteudo__card__img" src="./public/img/map.png" alt="">
                 <div class="secao-mapas__conteudo__card__texto">
                     <h2 class="title secao-mapas__conteudo__card__texto__title">Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Ex cum earum, quos voluptas tempore quidem natus corporis
-                     temporibus eveniet ipsum delectus veritatis dignissimos neque
-                      ipsa iure vero repellendus quibusdam at.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ex cum earum, quos voluptas tempore quidem natus corporis
+                        temporibus eveniet ipsum delectus veritatis dignissimos neque
+                        ipsa iure vero repellendus quibusdam at.</p>
                 </div>
-                <button class="secao-mapas__conteudo__botao" type="button"><img src="public/img/arrow-right.svg" alt=""></button>
+                <button class="secao-mapas__conteudo__botao" type="button"><img src="./public/img/arrow-right.svg"
+                        alt=""></button>
             </div>
 
             <div class="secao-mapas__conteudo__card">
-                <img class="secao-mapas__conteudo__card__img" src="public/img/map.png" alt="">
+                <img class="secao-mapas__conteudo__card__img" src="./public/img/map.png" alt="">
                 <div class="secao-mapas__conteudo__card__texto">
                     <h2 class="title secao-mapas__conteudo__card__texto__title">Lorem Ipsum</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Ex cum earum, quos voluptas tempore quidem natus corporis
-                     temporibus eveniet ipsum delectus veritatis dignissimos neque
-                      ipsa iure vero repellendus quibusdam at.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ex cum earum, quos voluptas tempore quidem natus corporis
+                        temporibus eveniet ipsum delectus veritatis dignissimos neque
+                        ipsa iure vero repellendus quibusdam at.</p>
                 </div>
-                <button class="secao-mapas__conteudo__botao" type="button"><img src="public/img/arrow-right.svg" alt=""></button>
+                <button class="secao-mapas__conteudo__botao" type="button"><img src="./public/img/arrow-right.svg"
+                        alt=""></button>
             </div>
 
-        </div> 
+        </div>
     </div>
 
     <div class="secao-quem-somos">
@@ -121,19 +134,22 @@
             <h2 class="title secao-quem-somos__container-descricao__title">Quem somos?</h2>
             <span class="line"></span>
             <p class="secao-quem-somos__container-descricao__texto">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a 
-                galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also 
-                the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with 
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a
+                galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                but also
+                the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                with
                 the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            </p> 
+            </p>
         </div>
     </div>
-    
+
     <div class="secao-logos">
         <div class="secao-quem-somos__container-logo">
-            <img src="public/img/upe-logo-vasado.png" alt="" class="secao-quem-somos__container-logo__logo">
-            <img src="public/img/logo-pernambuco.jpg" alt="" class="secao-quem-somos__container-logo__logo">
+            <img src="./public/img/upe-logo-vasado.png" alt="" class="secao-quem-somos__container-logo__logo">
+            <img src="./public/img/logo-pernambuco.jpg" alt="" class="secao-quem-somos__container-logo__logo">
         </div>
     </div>
     <footer class="rodape">
@@ -156,65 +172,10 @@
             </div>
         </div>
     </footer>
-
-
-
-
-    <!--<div class="area-mapas">
-        <div class="area-mapas__conteudo">
-            <span class="area-mapas__conteudo--texto">
-                <h2>Mapas fixos</h2><br>
-                <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quos natus temporibus unde modi aperiam, dignissimos earum eius ipsa quibusdam dolorum deleniti deserunt cumque dolores quidem eveniet animi fuga. Quisquam?</p><br>
-                <button class="area-mapas__conteudo--botao" ype="button">
-                    Explore
-                    <i class="area-mapas__conteudo--icone">&#129042;</i>
-                </button>
-            </span>
-            <div class="area-mapas__imagem">
-                <img class="area-mapas__conteudo--imagem" src="../media/img-1-small580.png" alt="imagem1">
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cum earum, quos voluptas tempore quidem natus corporis temporibus eveniet ipsum delectus veritatis dignissimos neque ipsa iure vero repellendus quibusdam at.</p>
-                <button class="area-mapas__imagem--botao" ype="button">
-                    <i class="area-mapas__imagem--icone">&#129042;</i>
-                </button>
-            </div>
-            <div class="area-mapas__imagem"> 
-                <img class="area-mapas__conteudo--imagem" src="../media/mapa-fisico-br-dgc.PNG" alt="imagem2">
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illum dolore itaque. Quod cupiditate magnam rem! Fugit ipsa ab amet architecto? Repudiandae sit est sint culpa eum, aliquid hic consequatur.</p>
-                <button class="area-mapas__imagem--botao" ype="button">
-                    <i class="area-mapas__imagem--icone">&#129042;</i>
-                </button>
-            </div>
-            <div class="area-mapas__imagem">
-                <img class="area-mapas__conteudo--imagem" src="../media/saibaMais_1-250_2021.jpg" alt="imagem3">
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut aspernatur optio velit magnam enim nulla fugit nisi tempora explicabo quis! Sit eaque enim deserunt fugiat sequi eos nobis? Accusantium, architecto?</p>
-                <button class="area-mapas__imagem--botao" ype="button">
-                    <i class="area-mapas__imagem--icone">&#129042;</i>
-                </button>
-            </div> 
-        </div> 
-    </div>
-    <div class="area-rodape">
-        <div class="area-rodape__um">
-            <h3>Logo</h3>
-            <p>Copyright © 2023 LAPES</p>
-        </div>
-        <div class="area-rodape__dois">
-            <h3>Menu</h3>
-            <p>Mapa</p>
-            <p>Mapas fixos</p>
-            <p>Quem somos</p>
-        </div>
-        <div class="area-rodape__tres">
-            <h3>Endereço físico</h3>
-            <p>Rua Josimar Rogério, 1227Colatina-ES<br>CNPJ: 94.126.614/0001-68</p>
-
-            <h3>Fale conosco</h3>
-            <p>lapesemal@email.com</p>
-        </div>
-    </div>-->
 </body>
+<!-- import do script do mapa e da funcionalidade de adicionar os marcadores -->
+<script src="./public/script/Map.js"></script>
+<script src="./public/script/AddMarcador.js"></script>
+<script src="./public/script/BarraPesquisa.js"></script>
+
 </html>
