@@ -1,0 +1,361 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root{
+    --principal-color: #00235B;
+    --aux-background-color: #ECF2FF;
+    --aux-font-color: white;
+    --transparente: rgb(0, 0, 0, 0);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    
+    width: 100%;
+    min-width: 100vh;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    background-color: var(--aux-font-color);
+    border-radius: 2rem;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 0.5rem;
+}
+
+.btn:hover{
+    background-color: var(--aux-background-color);
+    transition: 0.3s;
+}
+
+.btn--funcionalidades{
+    background-color: var(--principal-color);
+}
+
+.title
+{
+    font-family: 'Playfair Display', serif;
+}
+
+.line
+{
+
+  display: block;
+  width: min(20%);
+  position: relative;
+  margin: 1rem 0px 2rem;
+}
+
+.line::after
+{ 
+  content: "";
+  position: absolute;
+  background-color: var(--principal-color);
+  width: 100%;
+  height: 0.2rem;
+  z-index: 1;
+}
+
+
+
+/*----------------------------------------------------------------------------------- CABEÇALHO*/
+.cabecalho
+{
+    width: 100%;
+    background-color: var(--principal-color);
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--aux-font-color);
+}
+
+.cabecalho__area-interna
+{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho__area-interna__botao
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 10%;
+    height: 2.2rem;
+    color: var(--aux-font-color);
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: 1px solid var(--aux-font-color);
+    border-radius: 2rem;
+}
+
+.cabecalho__area-interna__botao:hover
+{
+    background-color: var(--aux-background-color);
+    color: var(--principal-color);
+    transition: 0.3s;
+}
+
+/*----------------------------------------------------------------------------------- SECÇÃO - MAPA INTERATIVO*/
+
+.secao-mapa-interativo{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secao-mapa-interativo__container-mapa-interativo{
+    width: 80%;
+    height: 80%;
+    background: url('../img/map.png') no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.secao-mapa-interativo__container-mapa-interativo__barra-pesquisa
+{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    background-color: var(--aux-font-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.secao-mapa-interativo__container-mapa-interativo__barra-pesquisa__botao{
+    border: none;
+    outline: none;
+    background-color: var(--aux-font-color);
+    
+}
+
+.secao-mapa-interativo__container-mapa-interativo__barra-pesquisa__campo-pesquisa
+{
+    border: none;
+    outline: none;
+    background-color: var(--aux-background-color);
+    display: block;
+    font-weight: bold;
+    width: 75%;
+    height: 55%;
+    border-radius: 0.2rem;
+    padding-left: 1rem;
+}
+
+.secao-mapa-interativo__container-mapa-interativo__secao-botoes--localizacao
+{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.secao-mapa-interativo__container-mapa-interativo__secao-botoes--funcionalidades{
+    display: flex;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 9;
+    align-self: flex-end;
+}
+
+.secao-mapa-interativo__container-mapa-interativo__secao-botoes--zoom
+{
+    grid-column-start: 9;
+    grid-column-end: 9;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    justify-self: flex-end;
+}
+
+.secao-mapa-interativo__container-mapa-interativo__secao-botoes--zoom__botao-tela-cheia
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--aux-background-color);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    
+}
+.secao-mapa-interativo__container-mapa-interativo__secao-botoes--zoom__botao-tela-cheia:hover
+{
+    transition: 0.3s;
+    background-color: var(--principal-color);
+    border-color: var(--principal-color);
+}
+
+/*----------------------------------------------------------------------------------- SECÇÃO - QUEM SOMOS NÓS*/
+.secao-quem-somos
+{
+    width: 100%;
+    height: 45vh;
+    background-color: var(--aux-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.secao-quem-somos__container-descricao
+{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.secao-quem-somos__container-descricao__title
+{
+    color: var(--principal-color);
+}
+
+.secao-quem-somos__container-descricao__texto
+{
+    text-align: center;
+}
+
+/*----------------------------------------------------------------------------------- SECÇÃO - LOGOS*/
+
+.secao-logos
+{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secao-quem-somos__container-logo
+{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.secao-quem-somos__container-logo__logo{
+    margin: 0px 0.5rem;
+    width: 120px;
+}
+
+.secao-mapas {
+   height: 90vh;
+   display: grid;
+   grid-template-columns: 10% auto;
+   overflow-x: scroll;
+}
+
+.secao-mapas__conteudo {
+    height: 70%;
+    align-self: center;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;   
+}
+
+.secao-mapas__conteudo__descricao {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;  
+    flex-direction: column;
+    width: 25vw;
+}
+
+.secao-mapas__conteudo__descricao__paragrafo{
+    text-align: right;
+}
+
+.secao-mapas__conteudo__botao {
+    margin-top: 1rem;
+    font-weight: bold;
+    border: 1px solid var(--principal-color);
+    border-radius: 2rem;
+    background-color: var(--aux-font-color);
+}
+
+.secao-mapas__conteudo__descricao__botao {
+    width: 50%;
+    height: 2.5rem;
+}
+
+.secao-mapas__conteudo__card
+{
+    height: 90%;
+    border: 1px solid var(--aux-background-color);
+    border-radius: 0.5rem;
+    margin-left: 2rem;
+    width: 25vw;
+    background-color: var(--aux-font-color);
+}
+
+.secao-mapas__conteudo__card__img{
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    object-fit: cover;
+    width: 100%;
+    height: 50%;
+}
+
+.secao-mapas__conteudo__card__texto{
+    margin: 15px;
+}
+
+.secao-mapas__conteudo__card__texto__title
+{
+    margin-bottom: 10px;
+}
+
+.rodape {
+    background-color: var(--principal-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35vh;
+    
+}
+
+.rodape__container-info
+{
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: var(--aux-font-color);
+}
+
+.rodape__container-info h3
+{
+   margin: 2rem 0px 0.3rem;
+}
