@@ -22,6 +22,10 @@ html{
     min-width: 100vh;
 }
 
+div > button {
+    display: flex;
+}
+
 .link{
     text-decoration: none;
 }
