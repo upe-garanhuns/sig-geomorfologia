@@ -1,7 +1,7 @@
 
     var popup = L.popup(); // "retagulo" que atrelado a um ponto ou marcador, circulo, poligono
     var latlng; // receberá as coordenadas ao clicar no mapa
-    var nome; // nomeque aparecerá no popup
+    var nome; // nome que aparecerá no popup
 
     // ativa a opção de adicionar um marcador
     function addMarcador(){

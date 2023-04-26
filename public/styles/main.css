@@ -305,6 +305,7 @@ div > button {
     border: 1px solid var(--principal-color);
     border-radius: 2rem;
     background-color: var(--aux-font-color);
+    margin-left: 50%;
 }
 
 .secao-mapas__conteudo__descricao__botao {

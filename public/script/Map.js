@@ -8,17 +8,35 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     }).addTo(map);
 
 // marcadores com as Universidades
-var upe = L.marker([-8.883365292551355, -36.496307445598866]).bindPopup("UPE - Campus Garanhuns");
-var ufape = L.marker([-8.906746985723792, -36.49430465779773]).bindPopup("UFAPE - Universidade do Agreste Pernambucano");
-var ifpe = L.marker([-8.876669397903788, -36.46299928402741]).bindPopup("IFPE - Campus Garanhuns");
+var upe = L.marker([-8.883365292551355, -36.496307445598866], {
+    title: "UPE"
+}).bindPopup(
+    "<h1>UPE - Campus Garanhuns</h1> <p>Universidade de Pernambuco em Garanhuns.</p> <img src='./public/img/locais/upe.jpeg' alt='UPE' width='250'</img>");
+var ufape = L.marker([-8.906746985723792, -36.49430465779773], {
+    title: "UFAPE"
+}).bindPopup(
+    "<h1>UFAPE - Universidade Federal do Agreste Pernambucano</h1> <p>Universidade Federal do Agreste Pernambucano em Garanhuns.</p> <img src='./public/img/locais/ufape.jpg' alt='UFAPE' width='250'</img>");
+var ifpe = L.marker([-8.876669397903788, -36.46299928402741], {
+    title: "IFPE"
+}).bindPopup(
+    "<h1>IFPE - Instituto Federal de Pernambuco</h1> <p>Instituto Federal de Pernambuco, Campus Garanhuns.</p> <img src='./public/img/locais/ifpe.jpg' alt='IFPE' width='250'</img>");
 
 // cria um variável que contem um layergroup dos marcadores
 var universidades = L.layerGroup([upe, ufape, ifpe]);
 
 // marcadores com os pontos turísticos
-var relogioFlores = L.marker([-8.88162340797237, -36.47694076226887]).bindPopup("Relógio das Flores");
-var cristoMagano = L.marker([-8.878126900850619, -36.518370171507364]).bindPopup("Cristo do Magano");
-var pauPombo = L.marker([-8.892893127714736, -36.49137605179187]).bindPopup("Pau Pombo");
+var relogioFlores = L.marker([-8.88162340797237, -36.47694076226887], {
+    title: "Relógio das Flores"
+}).bindPopup(
+    "<h1>Relógio das Flores</h1> <p>O famoso Relógio das Flores, ponto turístico muito querido de Garanhuns, no Agreste de Pernambuco.</p> <img src='./public/img/locais/relogio_das_flores.jpg' alt='Relógio das Flores' width='250'</img>");
+var cristoMagano = L.marker([-8.878126900850619, -36.518370171507364], {
+    title: "Cristo Magano"
+}).bindPopup(
+    "<h1>Cristo Magano</h1> <p>O mirante, em forma de fortaleza e instalado numa das sete colinas da cidade - a de Magano - fica a 1.030 metros de altitude e é pontuado por uma estátua de Cristo crucificado, esculpida pelo artista plástico Renato Pantaleão em 1954. A localidade oferece uma das mais belas vistas da cidade de Garanhuns.</p> <img src='./public/img/locais/cristo_magano.jpg' alt='Cristo Magano' width='250'</img>");
+var pauPombo = L.marker([-8.892893127714736, -36.49137605179187], {
+    title: "Parque Ruber van der Linden - Pau Pombo"
+}).bindPopup(
+    "<h1>Parque Ruber van der Linden - Pau Pombo</h1> <p>O Parque Ruber van der Linden é um dos lugares mais conhecidos e frequentados da cidade de Garanhuns. Apesar de ter esse nome, não homenageia um estrangeiro, mas uma personalidade nascida na terra, filho de um profissional da área de Contabilidade que nas horas vagas gostava de escrever textos pra teatro.</p> <img src='./public/img/locais/pau_pombo.jpg' alt='Pau Pombo' width='250'</img>");
 
 // cria um variável que contem um layergroup dos marcadores
 var pontosTuristicos = L.layerGroup([relogioFlores, cristoMagano, pauPombo]);
