@@ -6,27 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
-    <link rel="stylesheet" href="./public/styles/main.css">
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link rel="stylesheet" href="public/styles/main.css">
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="">
+        </script>
+    <!-- import do plugin Locate -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+    <!-- import do plugin PolylineMeasure -->
+    <link rel="stylesheet" href="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css" />
+    <script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
+    <!-- import do plugin LeafletMeasure (que contém função de calcular área.) -->
+    <link rel="stylesheet" href="http://ljagis.github.io/leaflet-measure/leaflet-measure.css">
+    <script src="public/lib/LeafletMeasure/leaflet-measure.js"></script>
+
     <title>SIG</title>
+
 </head>
 
 <body>
     <header class="cabecalho">
         <div class="cabecalho__area-interna">
-            <img src="./public/img/menu-icon.svg" alt="">
+            <img src="public/img/menu-icon.svg" alt="">
             <img src="" alt="logo">
             <a href="#" class="link cabecalho__area-interna__botao"><span>Entrar <img
-                        src="./public/img/sign-in-arrow-icon.svg" alt=""></span></a>
+                        src="public/img/sign-in-arrow-icon.svg" alt=""></span></a>
         </div>
     </header>
 
     <div class="secao-mapa-interativo">
         <div id="map" class="secao-mapa-interativo__container-mapa-interativo">
-            <!--<div class="secao-mapa-interativo__container-mapa-interativo__barra-pesquisa">
+            <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-700px, 0px, 0px);">
+                <div class="leaflet-pane leaflet-tile-pane"></div>
+            </div>
+        </div>
+        <div class="leaflet-pane leaflet-shadow-pane"></div>
+        <div class="leaflet-pane leaflet-overlay-pane"></div>
+        <div class="leaflet-pane leaflet-marker-pane"></div>
+        <div class="leaflet-pane leaflet-tooltip-pane"></div>
+        <div class="leaflet-pane leaflet-popup-pane"></div>
+        <div class="leaflet-proxy leaflet-zoom-animated"
+            style="transform: translate3d(3.95752e+06px, 6.93531e+06px, 0px) scale(32768);"></div>
+    </div>
+
+    <div class="leaflet-bottom leaflet-left"></div>
+    <div class="leaflet-bottom leaflet-right">
+        <div class="leaflet-control-attribution leaflet-control"></div>
+        <!--<div class="secao-mapa-interativo__container-mapa-interativo__barra-pesquisa">
                 <input type="search" placeholder="Encontre o endereço e o local" class="secao-mapa-interativo__container-mapa-interativo__barra-pesquisa__campo-pesquisa">
                 <button type="submit" class="secao-mapa-interativo__container-mapa-interativo__barra-pesquisa__botao"><img src="../public/img/lupa.svg" alt=""></button>
             </div>
@@ -69,7 +95,7 @@
                     <img src="../public/img/arrows-fullscreen.svg" alt="">
                 </span>
             </div>-->
-        </div>
+    </div>
     </div>
     <div class="secao-mapas">
         <div class="secao-mapas__conteudo">
@@ -82,24 +108,11 @@
                     olorum deleniti deserunt cumque dolores quidem .
                 </p>
                 <button class="secao-mapas__conteudo__botao secao-mapas__conteudo__descricao__botao"
-                    type="button">Explore <img src="./public/img/arrow-right.svg" alt=""></button>
+                    type="button">Explore <img src="public/img/arrow-right.svg" alt=""></button>
             </section>
 
             <div class="secao-mapas__conteudo__card">
-                <! –<img class="secao-mapas__conteudo__card__img" src="./public/img/map.png" alt="">
-                    <div class="secao-mapas__conteudo__card__texto">
-                        <h2 class="title secao-mapas__conteudo__card__texto__title">Lorem Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Ex cum earum, quos voluptas tempore quidem natus corporis
-                            temporibus eveniet ipsum delectus veritatis dignissimos neque
-                            ipsa iure vero repellendus quibusdam at.</p>
-                    </div>
-                    <button class="secao-mapas__conteudo__botao" type="button"><img src="./public/img/arrow-right.svg"
-                            alt=""></button>
-            </div>
-
-            <div class="secao-mapas__conteudo__card">
-                <img class="secao-mapas__conteudo__card__img" src="./public/img/map.png" alt="">
+                <img class="secao-mapas__conteudo__card__img" src="public/img/map.png" alt="">
                 <div class="secao-mapas__conteudo__card__texto">
                     <h2 class="title secao-mapas__conteudo__card__texto__title">Lorem Ipsum</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -107,12 +120,12 @@
                         temporibus eveniet ipsum delectus veritatis dignissimos neque
                         ipsa iure vero repellendus quibusdam at.</p>
                 </div>
-                <button class="secao-mapas__conteudo__botao" type="button"><img src="./public/img/arrow-right.svg"
+                <button class="secao-mapas__conteudo__botao" type="button"><img src="public/img/arrow-right.svg"
                         alt=""></button>
             </div>
 
             <div class="secao-mapas__conteudo__card">
-                <img class="secao-mapas__conteudo__card__img" src="./public/img/map.png" alt="">
+                <img class="secao-mapas__conteudo__card__img" src="public/img/map.png" alt="">
                 <div class="secao-mapas__conteudo__card__texto">
                     <h2 class="title secao-mapas__conteudo__card__texto__title">Lorem Ipsum</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -120,7 +133,20 @@
                         temporibus eveniet ipsum delectus veritatis dignissimos neque
                         ipsa iure vero repellendus quibusdam at.</p>
                 </div>
-                <button class="secao-mapas__conteudo__botao" type="button"><img src="./public/img/arrow-right.svg"
+                <button class="secao-mapas__conteudo__botao" type="button"><img src="public/img/arrow-right.svg"
+                        alt=""></button>
+            </div>
+
+            <div class="secao-mapas__conteudo__card">
+                <img class="secao-mapas__conteudo__card__img" src="public/img/map.png" alt="">
+                <div class="secao-mapas__conteudo__card__texto">
+                    <h2 class="title secao-mapas__conteudo__card__texto__title">Lorem Ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ex cum earum, quos voluptas tempore quidem natus corporis
+                        temporibus eveniet ipsum delectus veritatis dignissimos neque
+                        ipsa iure vero repellendus quibusdam at.</p>
+                </div>
+                <button class="secao-mapas__conteudo__botao" type="button"><img src="public/img/arrow-right.svg"
                         alt=""></button>
             </div>
 
@@ -146,8 +172,8 @@
 
     <div class="secao-logos">
         <div class="secao-quem-somos__container-logo">
-            <img src="./public/img/upe-logo-vasado.png" alt="" class="secao-quem-somos__container-logo__logo">
-            <img src="./public/img/logo-pernambuco.jpg" alt="" class="secao-quem-somos__container-logo__logo">
+            <img src="public/img/upe-logo-vasado.png" alt="" class="secao-quem-somos__container-logo__logo">
+            <img src="public/img/logo-pernambuco.jpg" alt="" class="secao-quem-somos__container-logo__logo">
         </div>
     </div>
     <footer class="rodape">
@@ -171,10 +197,12 @@
         </div>
     </footer>
 </body>
-<!-- import do script do mapa, funcionalidade de adicionar os marcadores e do gps -->
+<!-- import do script do mapa, da funcionalidade de adicionar os marcadores e a distancia entre dois pontos -->
 <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
-<script src="./public/script/Map.js"></script>
-<script src="./public/script/AddMarcador.js"></script>
+<script src="public/script/Map.js"></script>
+<script src="public/script/AddMarcador.js"></script>
+<script src="public/lib/PolylineMeasure/PolylineMeasureOptions.js"></script>
+<script src="public/lib/LeafletMeasure/LeafletMeasure.js"></script>
 <script src="./public/script/Gps.js"></script>
 
 </html>
