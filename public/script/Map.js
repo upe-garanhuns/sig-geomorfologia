@@ -8,7 +8,7 @@ var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     }).addTo(map);
 
 // marcadores com as Universidades
-var upe = L.marker([-8.883365292551355, -36.496307445598866], {
+/*var upe = L.marker([-8.883365292551355, -36.496307445598866], {
     title: "UPE"
 }).bindPopup(
     "<h1>UPE - Campus Garanhuns</h1> <p>Universidade de Pernambuco em Garanhuns.</p> <img src='./public/img/locais/upe.jpeg' alt='UPE' width='250'</img>");
@@ -45,7 +45,19 @@ var pontosTuristicos = L.layerGroup([relogioFlores, cristoMagano, pauPombo]);
 var overlayMaps = {
     "Universidades": universidades,
     "Pontos Turisticos": pontosTuristicos
+}*/
+
+var RG2017_regioesgeograficas_pe = L.tileLayer.betterWms("https://geoservicos.ibge.gov.br/geoserver/wms", {
+    layers: 'CGEO:RG2017_regioesgeograficas_pe',
+    transparency: true,
+    opacity: 0.4,
+  });
+
+// cria um objeto que contem as layers de overlay
+var overlayMaps = {
+    "RG2017_regioesgeograficas_pe": RG2017_regioesgeograficas_pe,
 }
+
 
 // cria uma tile layer opcional
 var mapbox = L.tileLayer('https://api.mapbox.com/styles/v1/johnmichel/ciobach7h0084b3nf482gfvvr/tiles/{z}/{x}/{y}?access_token=pk.eyJ1Ijoiam9obm1pY2hlbCIsImEiOiJjaW9iOW1vbHUwMGEzdnJseWNranhiMHpxIn0.leVOjMBazNl6v4h9MT7Glw',
